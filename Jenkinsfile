@@ -24,7 +24,7 @@ pipeline {
         scannerHome = tool 'SonarQube_Scanner_2.8'
     }
     steps {
-        withSonarQubeEnv('http://localhost:9000') {
+        withSonarQubeEnv('sonarqube') {
             bat "${scannerHome}/bin/sonar-scanner"
             bat "gradlew sonarqube"
         }
