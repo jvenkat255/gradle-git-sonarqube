@@ -21,7 +21,7 @@ pipeline {
     
  stage('Sonarqube') {
     environment {
-        scannerHome = tool 'SonarQubeScanner'
+        scannerHome = tool 'SonarQube_Scanner_2.8'
     }
     steps {
         withSonarQubeEnv('http://localhost:9000') {
