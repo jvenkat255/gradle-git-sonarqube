@@ -28,7 +28,7 @@ pipeline {
             //bat "${scannerHome}/bin/sonar-scanner"
             bat "gradlew sonarqube"
         }
-        timeout(time: 10, unit: 'MINUTES') {
+        timeout(time: 0.5, unit: 'MINUTES') {
             waitForQualityGate abortPipeline: true
         }
     }
