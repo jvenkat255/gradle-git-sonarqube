@@ -41,13 +41,16 @@ pipeline {
            // }
         //  }
       stage("Quality Gate"){
-	      echo QualityGate="qg"
-          timeout(time: 1, unit: 'HOURS') {
-              def qg = waitForQualityGate()
-              if (qg.status != 'OK') {
-                  error "Pipeline aborted due to quality gate failure: ${qg.status}"
+	      steps {
+        withSonarQubeEnv('sonarqube') {
+          timeout(time: 2, unit: 'MINUTES') {
+              def QualityGate = waitForQualityGate()
+              if (QualityGate.status != 'OK') {
+                  error "Pipeline aborted due to quality gate failure: ${QualityGate.status}"
               }
           }
+      }
+	      }
       }
              
      
