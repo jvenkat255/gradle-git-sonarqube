@@ -33,25 +33,14 @@ pipeline {
         //}
     }
  }
- //stage('Quality Gate') {
-            //steps {
+ stage('Quality Gate') {
+            steps {
            //   timeout(time: 2, unit: 'MINUTES') {
-               // waitForQualityGate abortPipeline: true
-            //  }
-           // }
-        //  }
-      stage("Quality Gate"){
-	      steps {
-        withSonarQubeEnv('sonarqube') {
-          timeout(time: 2, unit: 'MINUTES') {
-              echo QualityGate = waitForQualityGate()
-              if (QualityGate.status != 'passed') {
-                  error "Pipeline aborted due to quality gate failure: ${QualityGate.status}"
-              }
+                waitForQualityGate abortPipeline: true
+             }
+            //}
           }
-      }
-	      }
-      }
+     
              
      
    
