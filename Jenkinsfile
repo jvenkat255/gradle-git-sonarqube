@@ -25,7 +25,7 @@ pipeline {
     }
     steps {
         withSonarQubeEnv('sonarqube') {
-            bat "${scannerHome}/bin/sonar-scanner"
+            //bat "${scannerHome}/bin/sonar-scanner"
             bat "gradlew sonarqube"
         }
         timeout(time: 10, unit: 'MINUTES') {
