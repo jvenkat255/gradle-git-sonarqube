@@ -13,7 +13,7 @@ pipeline {
     }  
     stage('Source Checkout') {
       steps {
-        checkout([$class: 'GitSCM', branches: [[name: '*/$BRANCH_NAME']], 
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], 
         doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], 
         userRemoteConfigs: [[credentialsId: 'jvenkat255', url: 'https://github.com/jvenkat255/gradle-git-sonarqube.git']]])
         }
