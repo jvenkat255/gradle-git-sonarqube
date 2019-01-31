@@ -4,6 +4,7 @@ plugins {
 
 apply plugin: 'java'
 apply plugin: 'jacoco'
+apply plugin: 'org.sonarqube'
 
 repositories {
     jcenter()
@@ -11,6 +12,7 @@ repositories {
 
 dependencies {
     testCompile 'junit:junit:4.12'
+    classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6.2"
 }
 
 sonarqube {
