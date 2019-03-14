@@ -1,11 +1,13 @@
 plugins {
     id "org.sonarqube" version "2.2"
 }
-
+plugins {
+    id 'info.solidsoft.pitest' version '1.4.0'
+}
 apply plugin: 'java'
 apply plugin: 'jacoco'
 apply plugin: 'org.sonarqube'
-apply plugin: 'pit'
+
 
 repositories {
     jcenter()
@@ -13,6 +15,7 @@ repositories {
 
 dependencies {
     testCompile 'junit:junit:4.12'
+    classpath 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.4.0'
    
 }
 
