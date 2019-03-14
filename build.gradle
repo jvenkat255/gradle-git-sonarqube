@@ -15,7 +15,7 @@ repositories {
 
 dependencies {
     testCompile 'junit:junit:4.12'
-    classpath 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.4.0'
+    
    
 }
 
