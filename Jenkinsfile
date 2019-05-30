@@ -3,6 +3,7 @@ pipeline {
      options { 
     skipDefaultCheckout()
     disableConcurrentBuilds()
+	     timestamps()
    }
 	   
     stages {
