@@ -22,7 +22,7 @@ pipeline {
  stage('Sonarqube') {
     
     steps {
-        withSonarQubeEnv('sonarqube') {
+        withSonarQubeEnv('sonarqube_atg') {
             //bat "${scannerHome}/bin/sonar-scanner"
             bat "gradlew sonarqube"
         }
