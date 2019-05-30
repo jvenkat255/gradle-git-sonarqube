@@ -18,10 +18,10 @@ public class test {
 public class test1 {
 
     public static int div(int e, int f, int g, int h) throws Exception {
-    	if (b == 0) {
+    	if (f == 0) {
     		throw new UnsupportedOperationException("Can't divide by zero!");
     	}
-        return a / b;  
+        return e / f;  
     }
 
 }
