@@ -1,5 +1,5 @@
 pipeline {
-	agent { label 'ATG'}
+	agent { label 'AKS'}
      options { 
     skipDefaultCheckout()
     disableConcurrentBuilds()
@@ -20,9 +20,7 @@ pipeline {
     }
     
  stage('Sonarqube') {
-    environment {
-        scannerHome = tool 'SonarQube_Scanner_2.8'
-    }
+    
     steps {
         withSonarQubeEnv('sonarqube') {
             //bat "${scannerHome}/bin/sonar-scanner"
