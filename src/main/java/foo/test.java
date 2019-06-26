@@ -15,6 +15,9 @@ public class test {
         int i;
         int w;
         int l;
+        int x;
+        int y;
+        int z;
         
     	if (b == 0) {
     		throw new UnsupportedOperationException("Can't divide by zero!");
