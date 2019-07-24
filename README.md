@@ -18,4 +18,4 @@ and
 files of this project to see it in practice.
 
 Checking PR on multi branch pipeline In jenkins 
-test PR
+test PR & P{R
