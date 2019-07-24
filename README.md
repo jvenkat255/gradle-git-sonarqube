@@ -16,3 +16,5 @@ You can take a look at the
 and
 [.travis.yml](https://github.com/SonarSource/sq-com_example_java-gradle-travis/blob/master/.travis.yml)
 files of this project to see it in practice.
+
+Checking PR on multi branch pipeline
