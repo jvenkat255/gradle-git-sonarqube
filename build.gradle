@@ -22,6 +22,6 @@ dependencies {
 sonarqube {
     properties {
         property "sonar.projectName", "Java Gradle-based project analyzed on SonarQube"
-        property "sonar.projectKey", "com.sonarqube.examples.java-gradle-travis-project"
+        property "sonar.projectKey", "com.sonarqube.examples.java-gradle-project"
     }
 }
