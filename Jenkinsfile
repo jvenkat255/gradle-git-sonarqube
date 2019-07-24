@@ -1,5 +1,5 @@
 pipeline {
-	agent { label 'AKS'}
+	agent { label 'master'}
      options { 
     skipDefaultCheckout()
     disableConcurrentBuilds()
