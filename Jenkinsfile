@@ -22,7 +22,7 @@ pipeline {
     
 	    stage('Jacoco') {
 		    steps {
-			    bat "gradlew test jacocoTestReport"
+			    bat "gradlew test cobertura"
 			    
 			    step([$class: 'JUnitResultArchiver', testResults: '**/build/test-results/test/*.xml'])
 				
@@ -36,12 +36,7 @@ pipeline {
 			    reportName: 'Junit Report',
 			    reportTitles: 'junit'
 				])
-					step([$class: 'JacocoPublisher', 
-        				execPattern: '**/build/jacoco/*.exec',
-        				classPattern: '**/build/classes',
-      					sourcePattern: '**/src/main/java',
-        				sourcePattern: '**/src'
-        				])
+					
 			}//End post
 		  }//End Jacoco
 		    
