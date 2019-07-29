@@ -2,12 +2,22 @@ plugins {
     id "org.sonarqube" version "2.7.1"
 }
 plugins {
-    id 'info.solidsoft.pitest' version '1.4.0'
+  id "net.saliman.cobertura" version "2.6.1"
 }
 apply plugin: 'java'
 apply plugin: 'org.sonarqube'
 apply plugin: 'net.saliman.cobertura'
 
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "net.saliman:gradle-cobertura-plugin:2.6.1"
+  }
+}
 
 repositories {
     jcenter()
