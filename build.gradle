@@ -6,7 +6,7 @@ plugins {
 }
 apply plugin: 'java'
 apply plugin: 'org.sonarqube'
-apply plugin: "net.saliman.cobertura"
+apply plugin: 'net.saliman.cobertura'
 
 
 repositories {
