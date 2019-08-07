@@ -22,7 +22,7 @@ pipeline {
     
 	    stage('Cobertura') {
 		    steps {
-			    bat "gradlew test cobertura"
+			    bat "gradlew clean test coberturaCheck"
 			    
 			    step([$class: 'JUnitResultArchiver', testResults: '**/build/test-results/test/*.xml'])
 				
