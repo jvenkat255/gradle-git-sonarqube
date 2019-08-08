@@ -36,7 +36,18 @@ pipeline {
 			    reportName: 'Junit Report',
 			    reportTitles: 'junit'
 				])
-					
+			    
+			//publishCoverage adapters: [coberturaAdapter(path: '**/build/reports/cobertura/coverage.xml', thresholds: [[thresholdTarget: 'Class', unstableThreshold: 80.0], [thresholdTarget: 'Method', unstableThreshold: 80.0], [thresholdTarget: 'Line', unstableThreshold: 80.0]])], failNoReports: true, failUnhealthy: true, sourceFileResolver: sourceFiles('NEVER_STORE')
+			
+			cobertura autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: '**/build/reports/cobertura/coverage.xml', conditionalCoverageTargets: '70, 0, 0', failUnhealthy: false, failUnstable: false, lineCoverageTargets: '80, 0, 0', maxNumberOfBuilds: 0, methodCoverageTargets: '80, 0, 0', onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false
+			    
+		// post {
+        	//	always {
+           	//		 junit '**/nosetests.xml'
+            	//		 step([$class: 'CoberturaPublisher', autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: '**/coverage.xml', failUnhealthy: false, failUnstable: false, maxNumberOfBuilds: 0, onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false])
+        	//		}
+    		//}//End post
+			    
 			}//End post
 		  }//End Jacoco
 		    
