@@ -18,11 +18,16 @@ plugins {
 apply plugin: 'java'
 apply plugin: 'org.sonarqube'
 apply plugin: 'net.saliman.cobertura'
+apply plugin: 'groovy'
+apply plugin: 'cobertura'
 
-
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
 
 repositories {
     jcenter()
+    mavenLocal()
+    mavenCentral()
 }
 
 dependencies {
